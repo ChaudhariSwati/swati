@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swati - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #303042;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #0b0b41;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #9c97f1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #9c97f1;
+        }
+
+        .firstSection {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 5%;
+        }
+
+        .leftSection {
+            flex: 1;
+            font-size: 2rem;
+        }
+
+        .leftSection span.purple {
+            color: rgb(128, 27, 151);
+            font-weight: bold;
+        }
+
+        .rightSection {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightSection div {
+            font-size: 3rem;
+            color: #9c97f1;
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #9c97f1;
+            margin: 40px auto;
+            width: 90%;
+        }
+
+        .secondsection {
+            padding: 20px 5%;
+        }
+
+        .secondsection span.text-gray {
+            color: grey;
+            font-size: 1.2rem;
+        }
+
+        .secondsection h1 {
+            margin-top: 10px;
+            font-size: 2rem;
+            text-align: center;
+        } 
+
+        .experience {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #424260;
+            border-radius: 10px;
+        }
+
+        .experience h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #9c97f1;
+        }
+
+        .experience ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .experience ul li {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .skills-section {
+            margin-top: 50px;
+            padding: 20px 5%;
+        }
+
+        .skills-section h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skills-box {
+            background-color: #424260;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skills-box:hover {
+            transform: scale(1.05);
+        }
+
+        .skills-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #9c97f1;
+        }
+
+        .skills-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-box ul li {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+    #element{
+            color: rgb(128, 27, 151);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .leftSection {
+                margin-bottom: 30px;
+            }
+
+            .rightSection {
+                margin-top: 20px;
+            }
+
+            .box {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .projects-section {
+    margin-top: 50px;
+    padding: 20px 5%;
+    background-color: #424260;
+    border-radius: 10px;
+}
+
+.projects-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project-box {
+    background-color: #303042;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.project-box h2 {
+    font-size: 1.8rem;
+    color: #9c97f1;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+ .element{
+            color: rgb(128, 27, 151);
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Swati's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main> 
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Swati</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <div>🚀 Your Next Developer 🚀</div>
+            </div>
+        </section>
+        <hr>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>"
+        <!-- Setup and start animation! -->
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['Web devloper', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+                typeSpeed: 50,
+            });
+        </script>
+<section class="secondsection">
+    <span class="text-gray">What I have done so far</span>
+    <h1>Project</h1>
+    <div class="experience">
+        <h2>1. Netflix Clone (Full Stack)</h2>
+        <ul>
+            <li>A full-stack web application replicating Netflix's UI and functionality.</li>
+                
+            <li>Built using React, Node.js, Express, and MongoDB, it features user authentication, movie streaming, and a dynamic content recommendation system.</li>
+            <a href="https://www.w3schools.com">View project</a>
+
+        </ul>
+    </div>
+    <div class="experience">
+        <h2>2.E-coomerce app</h2>
+        <ul>
+            <li>An advanced e-commerce platform with secure payment integration, product listings, and a shopping cart. Developed using MERN stack, it provides a seamless shopping experience with user authentication and order management.</li>
+            <a href="https://www.w3schools.com">View project</a>
+
+        </ul>
+    </div>
+    <div class="experience">
+        <h2>3.Voting app(mern stack)</h2>
+        <ul>
+            <li>A secure and scalable voting application built using MERN stack. It allows users to create and participate in polls with real-time vote updates, authentication, and data visualization for results.</li>
+            <a href="https://www.w3schools.com">View project</a>
+
+        </ul>
+    </div>
+</section>
+<hr>
+
+        
+<section class="secondsection">
+            
+            <h1>Work Experience</h1>
+            <div class="experience">
+                <h2>Senior Software Engineer</h2>
+                <ul>
+                    <li>Developed and maintained scalable web applications using modern JavaScript frameworks like React and Angular.</li>
+                    <li>Optimized backend services using Node.js and integrated APIs for seamless communication between front-end and back-end systems.</li>
+                    <li>Led a team of junior developers, providing mentorship and conducting code reviews to ensure high-quality codebase.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h2>Freelance Developer</h2>
+                <ul>
+                    <li>Built customized e-commerce websites for clients, integrating payment gateways and inventory management systems.</li>
+                    <li>Designed and implemented responsive user interfaces, ensuring compatibility across various devices and browsers.</li>
+                    <li>Collaborated with clients to understand their requirements and delivered solutions within tight deadlines.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h2>Intern - Web Development</h2>
+                <ul>
+                    <li>Assisted in developing interactive dashboards using HTML, CSS, and JavaScript for data visualization.</li>
+                    <li>Performed debugging and resolved critical issues in existing applications to improve performance and usability.</li>
+                    <li>Gained hands-on experience with version control systems like Git and project management tools.</li>
+                </ul>
+            </div>
+        </section>
+        <hr>
+        <section class="skills-section">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skills-box">
+                    <h2>Frontend</h2>
+                    <ul>
+                        <li>React JS</li>
+                        <li>Redux</li>
+                        <li>Next JS</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                        <li>Material UI</li>
+                        <li>Flutter</li>
+                    </ul>
+                </div>
+                <div class="skills-box">
+                    <h2>Backend</h2>
+                    <ul>
+                        <li>Node JS</li>
+                        <li>Express JS</li>
+                        <li>GraphQL</li>
+                        <li>Python</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <div class="skills-box">
+                    <h2>Android</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>XML</li>
+                        <li>Android Studio</li>
+                    </ul>
+                </div>
+                <div class="skills-box">
+                    <h2>Others</h2>
+                    <ul>
+                        <li>Git</li>
+  
+                      <li>GitHub</li>
+                        <li>Docker</li>
+                        <li>Netlify</li>
+                        <li>VS Code</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr>
+        
+      
+    </main>
+</body>
+
+</html>
+
