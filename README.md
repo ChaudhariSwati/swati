@@ -7,12 +7,10 @@ Features
 ✔ Interactive UI with smooth animations
 ✔ Sections: About Me, Skills, Projects, Resume, Contact
 ✔ Dynamic project showcase (fetching data from JSON/GitHub)
-✔ Contact form with email integration
+
 
 Technologies Used
-Frontend: HTML, CSS, JavaScript (or React, if used)
-Backend: Node.js, Express (if applicable)
-Database: Firebase / MongoDB (if applicable)
-Hosting: GitHub Pages / Vercel / Netlify
+Frontend: HTML, CSS, JavaScript 
+Hosting: GitHub Pages 
 Live Demo
-🔗 Live Portfolio Website
+ https://github.com/ChaudhariSwati/swati/settings
